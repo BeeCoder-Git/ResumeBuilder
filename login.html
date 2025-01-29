@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/be0c417bd5.js" crossorigin="anonymous"></script>
+    <title>build.resume</title>
+</head>
+
+<body>
+    <nav class="navbar bg-white">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/curriculum-vitae.png" alt="" class="navbar-brand-icon">
+                        <span class="navbar-brand-text">build
+                            <span>resume.</span>
+                    </a>
+                    <ul id="sidemenu">
+                        <li><a href="index.html">Home</a></li>
+
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section-one">
+        <div class="container">
+            <div class="section-one-content">
+                <div class="section-one-r text-center">
+                    <form id="MainForm">
+                        <h4 class="lg-title" style="color: var(--clr-blue-mid);">Sign In User</h4>
+                        <br><br>
+                        <div class="form-floating">
+                            <i class="fa-solid fa-envelope" style="float: left;"></i>
+                            <label for="floatingInput" style="float: left;">. Email address</label>
+                            <input type="email" class="form-control" id="emailInp" placeholder="name@example.com">
+                        </div>
+                        <br><br>
+                        <div class="form-floating">
+                            <i class="fa-solid fa-lock" style="float: left;"></i>
+                            <label for="floatingPassword" style="float: left;">. Password</label>
+                            <input type="password" class="form-control" id="passInp" placeholder="Password">
+                        </div>
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <a href="register.html"><button type="button" class="btn btn-secondary">Sing Up</button></a>
+                    </form>
+                </div>
+                <div class="section-one-l">
+                    <img src="assets/images/footer.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="grid">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"><i class="fa-solid fa-angle-right"></i>Home</a>
+            <a href="about.html"><i class="fa-solid fa-angle-right"></i>About</a>
+            <a href="contact.html"><i class="fa-solid fa-angle-right"></i>Contact Us</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i>Filter search</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="home.html"><i class="fa-solid fa-angle-right"></i>Account</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i>login</a>
+            <a href="register.html"><i class="fa-solid fa-angle-right"></i>register</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/profile.php?id=100075689192042"><i
+                    class="fa-brands fa-facebook"></i>facebook</a>
+            <a href="https://www.instagram.com/01_binarian_10?igsh=MT5ZW5hZGlxOTAycA=="><i
+                    class="fa-brands fa-instagram"></i>instagram</a>
+            <a
+                href="https://www.linkedin.com/in/bibek-kundu-774705280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                    class="fa-brands fa-linkedin"></i>linkedin</a>
+            <a href="https://youtube.com/@BIBEK_KUNDU_CST?si=Pk-hBEsjc9bMHdm_"><i
+                    class="fa-brands fa-youtube"></i>youtube</a>
+        </div>
+    </section>
+
+
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="footer-content text-center">
+                <p class="fs-15">&copy; Copyright 2024. All Rights Reserved - <span>BINARIAN</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDtiKcwKJyK_T5PHYY3ZkNyUNhf5MlU_zc",
+            authDomain: "resumegenerator-399b7.firebaseapp.com",
+            databaseURL: "https://resumegenerator-399b7-default-rtdb.firebaseio.com",
+            projectId: "resumegenerator-399b7",
+            storageBucket: "resumegenerator-399b7.appspot.com",
+            messagingSenderId: "250435710482",
+            appId: "1:250435710482:web:579aec9852cce3ab3672cb",
+            measurementId: "G-3DB55ZBRLD"
+        };
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const auth = getAuth(app);
+        const dbref = ref(db);
+        const analytics = getAnalytics(app);
+        let EmailInp = document.getElementById('emailInp');
+        let PassInp = document.getElementById('passInp');
+        let MainForm = document.getElementById('MainForm');
+
+        let SignInUser = evt => {
+            evt.preventDefault();
+            signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+                .then((credentials) => {
+                    get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) => {
+                        if (snapshot.exists) {
+                            sessionStorage.setItem("user-info", JSON.stringify({
+                                firstname: snapshot.val().firstname,
+                                lastname: snapshot.val().lastname
+                            }))
+                            sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                            window.location.href = 'home.html';
+                        }
+                    })
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    console.log(error.code);
+                    console.log(error.message);
+                })
+        }
+        MainForm.addEventListener('submit', SignInUser);
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build.resume</title>
+    <link rel="stylesheet" href="assets/css/templates.css">
+    <script src="https://kit.fontawesome.com/be0c417bd5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar bg-white">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/curriculum-vitae.png" alt="" class="navbar-brand-icon">
+                        <span class="navbar-brand-text">build
+                            <span>resume.</span>
+                    </a>
+                    <ul id="sidemenu">
+                        <li><a href="home.html">Account</a></li>
+                        
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-bright" id="portfolio">
+        <div class="container">
+            <h1 class="sub-title title" style="text-align: center; color: rgb(51, 51, 51);">Templates</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="assets/images/resume.png">
+                    <div class="layer">
+                        <h3>build.resume</h3>
+                        <p>Click here to choose the Template.</p>
+                        <a href="resume.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/images/resume1.png">
+                    <div class="layer">
+                        <h3>Project is not Added</h3>
+                        <p>sorry this is not available</p>
+                        <a href="resume1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/images/resume2.png">
+                    <div class="layer">
+                        <h3>Project is not Added</h3>
+                        <p>sorry this is not available</p>
+                        <a href="resume2.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn bg-dark">See more</a>
+        </div>
+    </div>
+
+
+    
+    
+
+
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="footer-content text-center">
+                <p class="fs-15">&copy; Copyright 2024. All Rights Reserved - <span>BINARIAN</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

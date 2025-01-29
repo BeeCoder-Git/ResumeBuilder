@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build.resume</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/be0c417bd5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-white">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/curriculum-vitae.png" alt="" class="navbar-brand-icon">
+                        <span class="navbar-brand-text">build
+                            <span>resume.</span>
+                    </a>
+                    <ul id="sidemenu">
+                        <li><a href="home.html">Home</a></li>
+
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section-re id="about-sc" class="">
+        <div class="container">
+            <div class="about-cnt">
+                <form action="" class="cv-form" id="cv-form">
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>about section</h3>
+                        </div>
+
+                        <div class="cv-form-row cv-form-row-about" id="aboutsection">
+
+                            <div class="cols-3">
+                                <div class="form-elem">
+                                    <label for="" class="form-label">First Name</label>
+                                    <input type="text" name="firstname" class="form-control firstname" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Bibek">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Middle Name <span
+                                            class="opt-text">(optional)</span></label>
+                                    <input type="text" name="middlename" class="form-control middlename" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Kumar">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Last Name</label>
+                                    <input type="text" name="lastname" class="form-control lastname" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Kundu">
+                                    <span class="form-text"></span>
+                                </div>
+
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Fathers Name</label>
+                                    <input type="text" name="fathersname" class="form-control fathersname" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Bibek">
+                                    <span class="form-text"></span>
+                                </div>
+
+                            </div>
+                            <div class="cols-3">
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Your Image</label>
+                                    <input type="file" name="image" class="form-control-image" id="" accept="image/*"
+                                        onchange="previewImage()">
+                                </div>
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Designation</label>
+                                    <input type="text" name="designation" class="form-control designation" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Web Developer">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Addres</label>
+                                    <input type="text" name="address" class="form-control address" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Dutta patty Alipurduar">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
+                            <div class="cols-3">
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control email" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. bibek@gmail.com">
+                                    <span class="form-text"></span>
+                                </div>
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Phone No:</label>
+                                    <input type="number" name="phoneno" class="form-control phoneno" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. 000-000-0000">
+                                    <span class="form-text"></span>
+                                </div>
+
+                                <div class="form-elem">
+                                    <label for="" class="form-label">Summary</label>
+                                    <input type="text" name="summary" class="form-control summary" id=""
+                                        onkeyup="generateCv()" placeholder="e.g. Kundu">
+                                    <span class="form-text"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" onclick="hideshow()" class="btn btn-secondary showhideBtn showhideBtn-about">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divabout = document.getElementById('aboutsection');
+                        var display = 0;
+                        var aboutShowHideBtn = document.querySelector('.showhideBtn-about');
+
+                        function hideshow() {
+                            if (display == 1) {
+                                divabout.style.display = 'block';
+                                display = 0;
+                                aboutShowHideBtn.textContent = 'hide';
+                            }
+                            else {
+                                divabout.style.display = 'none';
+                                display = 1;
+                                aboutShowHideBtn.textContent = 'show';
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>achivements</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="achivesection">
+                            <div class="repeater" data-repeater-list="group-a">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-achivement">
+                                        <div class="cols-2">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Title</label>
+                                                <input type="text" name="achive_title" class="form-control achive_title"
+                                                    id="" onkeyup="generateCv()" placeholder="e.g. Bibek">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Description</label>
+                                                <input type="text" name="achive_description"
+                                                    class="form-control achive_description" id="" onkeyup="generateCv()"
+                                                    placeholder="e.g. Bibek">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow1()" class="btn btn-secondary showhideBtn showhideBtn-achive">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divachive = document.getElementById('achivesection');
+                        var display = 0;
+                        var achiveShowHideBtn = document.querySelector('.showhideBtn-achive');
+
+                        function hideshow1() {
+                            if (display == 1) {
+                                divachive.style.display = 'block';
+                                display = 0;
+                                achiveShowHideBtn.textContent = 'hide';
+                            }
+                            else {
+                                divachive.style.display = 'none';
+                                display = 1;
+                                achiveShowHideBtn.textContent = 'show';
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>experience</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="expsection">
+                            <div class="repeater" data-repeater-list="group-b">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-experience">
+                                        <div class="cols-3">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Title</label>
+                                                <input type="text" name="exp_title" class="form-control exp_title" id=""
+                                                    onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Company / Organization</label>
+                                                <input type="text" name="exp_organization"
+                                                    class="form-control exp_organization" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Location</label>
+                                                <input type="text" name="exp_location" class="form-control exp_location"
+                                                    id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cols-3">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Start Date</label>
+                                                <input type="date" name="exp_start_date"
+                                                    class="form-control exp_start_date" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">End Date</label>
+                                                <input type="date" name="exp_end_date" class="form-control exp_end_date"
+                                                    id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Description</label>
+                                                <input type="text" name="exp_description"
+                                                    class="form-control exp_description" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow2()" class="btn btn-secondary showhideBtn showhideBtn-exp">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divexp = document.getElementById('expsection');
+                        var display = 0;
+                        var expShowHideBtn = document.querySelector('.showhideBtn-exp');
+
+                        function hideshow2() {
+                            if (display == 1) {
+                                divexp.style.display = 'block';
+                                display = 0;
+                                expShowHideBtn.textContent = 'hide';
+                            }
+                            else {
+                                divexp.style.display = 'none';
+                                display = 1;
+                                expShowHideBtn.textContent = 'show';
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>education</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="edusection">
+                            <div class="repeater" data-repeater-list="group-c">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-experience">
+                                        <div class="cols-3">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">School</label>
+                                                <input type="text" name="edu_school" class="form-control edu_school"
+                                                    id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Degree</label>
+                                                <input type="text" name="edu_degree" class="form-control edu_degree"
+                                                    id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">City</label>
+                                                <input type="text" name="edu_city" class="form-control edu_city" id=""
+                                                    onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cols-3">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Start Date</label>
+                                                <input type="date" name="edu_start_date"
+                                                    class="form-control edu_start_date" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">End Date</label>
+                                                <input type="date" name="edu_graduation_date"
+                                                    class="form-control edu_graduation_date" id=""
+                                                    onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Description</label>
+                                                <input type="text" name="edu_description"
+                                                    class="form-control edu_description" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow3()" class="btn btn-secondary showhideBtn showhideBtn-edu">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divedu = document.getElementById('edusection');
+                        var display = 0;
+                        var eduShowHideBtn = document.querySelector('.showhideBtn-edu');
+
+                        function hideshow3() {
+                            if (display == 1) {
+                                divedu.style.display = 'block';
+                                display = 0;
+                                eduShowHideBtn.textContent = 'hide'
+                            }
+                            else {
+                                divedu.style.display = 'none';
+                                display = 1;
+                                eduShowHideBtn.textContent = 'show'
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>projects</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="projsection">
+                            <div class="repeater" data-repeater-list="group-d">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-projects">
+                                        <div class="cols-3">
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Project Name</label>
+                                                <input type="text" name="proj_title" class="form-control proj_title"
+                                                    id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Project Link</label>
+                                                <input type="text" name="proj_link" class="form-control proj_link" id=""
+                                                    onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                            <div class="form-elem">
+                                                <label for="" class="form-label">Description</label>
+                                                <input type="text" name="proj_description"
+                                                    class="form-control proj_description" id="" onkeyup="generateCv()">
+                                                <span class="form-text"></span>
+                                            </div>
+                                        </div>
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow4()" class="btn btn-secondary showhideBtn showhideBtn-proj">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divproj = document.getElementById('projsection');
+                        var display = 0;
+                        var projShowHideBtn = document.querySelector('.showhideBtn-proj');
+
+                        function hideshow4() {
+                            if (display == 1) {
+                                divproj.style.display = 'block';
+                                display = 0;
+                                projShowHideBtn.textContent = 'hide'
+                            }
+                            else {
+                                divproj.style.display = 'none';
+                                display = 1;
+                                projShowHideBtn.textContent = 'show'
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>skills</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="skillsection">
+                            <div class="repeater" data-repeater-list="group-e">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-skills">
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Skill</label>
+                                            <input type="text" name="skill" class="form-control skill" id=""
+                                                onkeyup="generateCv()">
+                                            <span class="form-text"></span>
+                                        </div>
+
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow5()" class="btn btn-secondary showhideBtn showhideBtn-skill">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divskill = document.getElementById('skillsection');
+                        var display = 0;
+                        var skillShowHideBtn = document.querySelector('.showhideBtn-skill');
+
+                        function hideshow5() {
+                            if (display == 1) {
+                                divskill.style.display = 'block';
+                                display = 0;
+                                skillShowHideBtn.textContent = 'hide'
+                            }
+                            else {
+                                divskill.style.display = 'none';
+                                display = 1;
+                                skillShowHideBtn.textContent = 'show'
+                            }
+                        }
+                    </script>
+
+                    <div class="cv-form-blk">
+                        <div class="cv-form-row-title">
+                            <h3>languages</h3>
+                        </div>
+
+                        <div class="row-separator repeater" id="langsection">
+                            <div class="repeater" data-repeater-list="group-f">
+                                <div data-repeater-item>
+                                    <div class="cv-form-row cv-form-row-language">
+                                        <div class="form-elem">
+                                            <label for="" class="form-label">Language</label>
+                                            <input type="text" name="skill" class="form-control language" id=""
+                                                onkeyup="generateCv()">
+                                            <span class="form-text"></span>
+                                        </div>
+
+                                        <button data-repeater-delete type="button"
+                                            class="repeater-remove-btn">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-repeater-create value="Add" class="repeater-add-btn">+</button>
+                        </div>
+                        <button type="button" onclick="hideshow6()"
+                            class="btn btn-secondary showhideBtn showhideBtn-lang">
+                            hide</button>
+                    </div>
+
+                    <script>
+                        var divlang = document.getElementById('langsection');
+                        var display = 0;
+                        var langShowHideBtn = document.querySelector('.showhideBtn-lang');
+
+
+
+                        function hideshow6() {
+                            if (display == 1) {
+                                divlang.style.display = 'block';
+                                display = 0;
+                                langShowHideBtn.textContent = 'hide';
+                            }
+                            else {
+                                divlang.style.display = 'none';
+                                display = 1;
+                                langShowHideBtn.textContent = 'show';
+                            }
+                        }
+                    </script>
+
+                </form>
+            </div>
+        </div>
+    </section-re>
+
+    <section-printCV id="preview-sc" class="print_area">
+        <div class="container">
+            <div class="preview-cnt">
+                <div class="preview-cnt-l bg-red text-white">
+                    <div class="preview-blk">
+                        <div class="preview-image">
+                            <img src="" alt="" id="image_dsp">
+                        </div>
+                    </div>
+
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>Personal Info</h3>
+                        </div>
+                        <div class="preview-blk-list">
+                            <div class="preview-item">
+                                <span class="preview-item-val" id="fathers_dsp"></span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-item-val" id="phoneno_dsp"></span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-item-val" id="email_dsp"></span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-item-val" id="address_dsp"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>skills</h3>
+                        </div>
+                        <div class="skills-items preview-blk-list" id="skills_dsp">
+                            <!-- skills list here -->
+                        </div>
+                    </div>
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>Language</h3>
+                        </div>
+                        <div class="language-items preview-blk-list" id="language_dsp">
+                            <!-- language list here -->
+                        </div>
+                    </div>
+                    <!-- education -->
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>educations</h3>
+                        </div>
+                        <div class="educations-items preview-blk-list" id="educations_dsp"></div>
+                    </div>
+                </div>
+                <div class="preview-cnt-r bg-white">
+                    <div class="preview-blk">
+                        <div class="preview-item preview-item-name">
+                            <span class="preview-item-val" style="font-size: 35px;" id="fullname_dsp"></span>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-item-val text-uppercase fw-6 ls-1" id="designation_dsp"></span>
+                        </div>
+                        <br>
+                        <div class="preview-item">
+                            <span class="preview-item-val" id="summary_dsp"></span>
+                        </div>
+                        <div class="preview-blk-title">
+                            <h3>Achivements</h3>
+                        </div>
+                        <div class="achivements-items preview-blk-list" id="achivements_dsp"></div>
+                    </div>
+
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>experiences</h3>
+                        </div>
+                        <div class="experiences-items preview-blk-list" id="experiences_dsp"></div>
+                    </div>
+
+
+                    <div class="preview-blk">
+                        <div class="preview-blk-title">
+                            <h3>projects</h3>
+                        </div>
+                        <div class="projects-items preview-blk-list" id="projects_dsp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section-printCV>
+
+    <section-btn-sc class="print-btn-sc">
+        <div class="container">
+            <button type="button" class="print-btn btn btn-primary" onclick="printCV()">Print CV</button>
+        </div>
+    </section-btn-sc>
+
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- jquery repeater cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"
+        integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom js -->
+    <script src="assets/js/script.js"></script>
+    <!-- app js -->
+    <script src="assets/js/app.js"></script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    
+</body>
+
+</html>
