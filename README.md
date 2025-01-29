@@ -1,6 +1,6 @@
-# BuildCV with Bibek
+# ResumeBuilder
 
-BuildCV with Bibek is an online platform designed to help users create professional and ATS-friendly resumes effortlessly. With a user-friendly interface and customizable templates, users can generate resumes that stand out to potential employers.
+ResumeBuilder is an online platform designed to help users create professional and ATS-friendly resumes effortlessly. With a user-friendly interface and customizable templates, users can generate resumes that stand out to potential employers.
 
 ## Features
 
@@ -14,7 +14,7 @@ BuildCV with Bibek is an online platform designed to help users create professio
 
 To get started with BuildCV with Bibek:
 
-1. **Visit the Website**: Navigate to [BuildCV with Bibek](https://buildcvwithbibek.netlify.app/).
+1. **Visit the Website**: Navigate to [ResumeBuilder](https://buildcvwithbibek.netlify.app/).
 2. **Select a Template**: Browse through the available templates and select one that best fits your professional profile.
 3. **Input Your Information**: Fill in your personal details, work experience, education, skills, and other relevant sections.
 4. **Preview and Download**: Review your resume in real-time and download it once you're satisfied.
