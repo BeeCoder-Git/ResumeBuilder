@@ -17,31 +17,13 @@ To get started with BuildCV with Bibek:
 1. **Visit the Website**: Navigate to [BuildCV with Bibek](https://buildcvwithbibek.netlify.app/).
 2. **Select a Template**: Browse through the available templates and select one that best fits your professional profile.
 3. **Input Your Information**: Fill in your personal details, work experience, education, skills, and other relevant sections.
-4. **Customize**: Adjust the layout, fonts, and colors to match your personal branding.
-5. **Preview and Download**: Review your resume in real-time and download it once you're satisfied.
+4. **Preview and Download**: Review your resume in real-time and download it once you're satisfied.
 
 ## Technologies Used
 
-- **Frontend**: [React.js](https://reactjs.org/) for building the user interface.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for responsive and customizable designs.
+- **Frontend**: [HTML](https://html.org/) for building the user interface.
+- **Styling**: [CSS](https://css.com/) for responsive and customizable designs.
 - **Hosting**: Deployed on [Netlify](https://www.netlify.com/) for seamless and efficient hosting.
-
-## Contributing
-
-We welcome contributions to enhance the platform. To contribute:
-
-1. **Fork the Repository**: Create a personal copy of the repository.
-2. **Clone the Fork**: Download the forked repository to your local machine.
-3. **Create a New Branch**: Work on your feature or bug fix in a new branch.
-4. **Commit Changes**: Make sure to write clear and concise commit messages.
-5. **Push to Repository**: Upload your changes to your fork.
-6. **Submit a Pull Request**: Propose your changes for review.
-
-For detailed instructions, refer to the [Contributing Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
